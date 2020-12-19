@@ -13,7 +13,13 @@ module.exports = function(app) {
 		//pushes the data into the db
 		input.push(req.body);
 
-	
+		let newNotes = JSON.stringify(input);
+		fs.writeFileSync('./db/db.json', newNotes);
+
+		res.json(req.body);
+	});
+
+
 
 
 
