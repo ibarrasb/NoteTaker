@@ -7,6 +7,12 @@ module.exports = function(app) {
 		let notes = JSON.parse(fs.readFileSync(path.join(__dirname, '../db/db.json')));
 		res.json(notes);
 	});
+	//recives user input, adds it to the db as JSON
+	app.post('/api/notes', function(req, res) {
+		let input = JSON.parse(fs.readFileSync(path.join(__dirname, '../db/db.json')));
+		//pushes the data into the db
+		input.push(req.body);
+
 	
 
 
