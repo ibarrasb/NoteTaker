@@ -20,13 +20,19 @@ module.exports = function(app) {
 	});
 
 	app.delete('/api/notes/:id', function(req, res) {
-		//delete
-	
+		//gets the id of the selected note
+		let id = req.params.id;
+		//reads the notes and recieves it as JSON
+		let savedNotes = JSON.parse(fs.readFileSync(path.join(__dirname, '../db/db.json')));
+		//finds the position of selected note
+		let index = savedNotes.findIndex( element => {
+			if (element.id === id) return true;
+		});
+		//removes notes at selected index
+		savedNotes.splice(index, 1);
+		//updates the notes with the newly deleted notes and adds it to the db
+		var newNotes = JSON.stringify(savedNotes);
+		fs.writeFileSync('./db/db.json', newNotes);
+		res.send('Note Deleted');
 	})
-
-
-
-
-
-
 };

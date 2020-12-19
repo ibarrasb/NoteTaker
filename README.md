@@ -1,5 +1,6 @@
 <h1 align="center">Note Taker</h1>
-  
+![Note Taker App](./notetaker.png)
+Click [here] to deploy(https://eduardo-notetaker.herokuapp.com/).
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
 ## Description
 🔍 An application that can be used to write, save, and delete notes. 
