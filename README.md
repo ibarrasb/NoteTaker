@@ -2,7 +2,7 @@
 
 ![Note Taker App](./notetaker.png)
 
-Click to deploy[here](https://eduardo-notetaker.herokuapp.com/).
+Click to deploy [here](https://eduardo-notetaker.herokuapp.com/).
 
 
 ![badge](https://img.shields.io/badge/license-MIT-brightgreen)<br />
