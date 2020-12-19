@@ -15,9 +15,18 @@ Click to deploy [here](https://eduardo-notetaker.herokuapp.com/).
 - [Contributing](#contributing)
 - [Tests](#Tests)
 ## Installation
-index.html
+```bash
+npm install
+
+```
 ## Usage
-index.html
+```bash
+node server.js
+
+```
+
+https://eduardo-notetaker.herokuapp.com/
+
 ## Tests
 
 ## License
