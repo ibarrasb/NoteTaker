@@ -19,6 +19,10 @@ module.exports = function(app) {
 		res.json(req.body);
 	});
 
+	app.delete('/api/notes/:id', function(req, res) {
+		//delete
+	
+	})
 
 
 
