@@ -1,22 +1,18 @@
+//npm insall express
 var express = require("express");
-
+//make the server
 var app = express();
-
+//set up port to local host 8080
 var PORT = process.env.PORT || 8080;
-
-// set up the Express app to handle data parsing
+//allow to parse data
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
-
-// tell the server to fetch assets from public folder
+//be able to use the public folder
 app.use(express.static('public'));
-
-// ROUTES to point the server to
-// tells the server how to respond when users visit or request data from various URLs
-require('./redirect/note')(app);
+//routes to selected servers and tells how to respond to the request
+require('./redirect/notesAPI')(app);
 require('./redirect/html')(app);
-
-// start the Express server
+//Starts server, lets user know its working..
 app.listen(PORT, function() {
   console.log('App listening on PORT: ' + PORT);
 });
